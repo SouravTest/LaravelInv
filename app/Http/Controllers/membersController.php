@@ -60,7 +60,7 @@ class membersController extends Controller
             ->where('password', $req->password)->get('name');
         $data = json_decode($data);
         if (!$data) {
-            $t = session()->flash('message', "Wrong EMAIL or PASSWORD");
+            $t = session()->flash('message', "Wrong EMAIL or PASSWORD Try Again");
             return redirect('login');
         } else {
             $req->session()->put('user', $data[0]->name);
