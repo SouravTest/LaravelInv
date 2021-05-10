@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\apiController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -22,3 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('user', [UserController::class, 'getdata']);
 Route::post('add', [membersController::class, 'saveData']);
+
+Route::post('register', [apiController::class, 'register']);
+Route::post('login', [apiController::class, 'login']);
