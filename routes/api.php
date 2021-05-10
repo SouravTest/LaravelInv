@@ -23,5 +23,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('user', [UserController::class, 'getdata']);
 Route::post('add', [membersController::class, 'saveData']);
 
+// API FOR REACT
+
 Route::post('register', [apiController::class, 'register']);
 Route::post('login', [apiController::class, 'login']);
+Route::post('addproduct', [apiController::class, 'addProduct']);
+Route::get('listproduct', [apiController::class, 'listProduct']);
+Route::delete('deleteproduct/{id}', [apiController::class, 'deleteProduct']);
+Route::get('showproduct/{id}', [apiController::class, 'showProduct']);
+Route::put('updateproduct/{id}', [apiController::class, 'updateProduct']);
