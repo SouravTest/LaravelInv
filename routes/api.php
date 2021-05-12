@@ -32,3 +32,5 @@ Route::get('listproduct', [apiController::class, 'listProduct']);
 Route::delete('deleteproduct/{id}', [apiController::class, 'deleteProduct']);
 Route::get('showproduct/{id}', [apiController::class, 'showProduct']);
 Route::put('updateproduct/{id}', [apiController::class, 'updateProduct']);
+Route::get('searchproduct/{key}', [apiController::class, 'searchProduct']);
+Route::get('showproductdetails/{id}', [apiController::class, 'showProductDetails']);

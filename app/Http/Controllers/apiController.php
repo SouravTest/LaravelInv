@@ -79,4 +79,15 @@ class apiController extends Controller
         return $product;
     }
 
+    public function searchProduct($key)
+    {
+        return Product::where('name', 'LIKE', "%$key%")->get();
+    }
+
+    public function showProductDetails($id)
+    {
+        return Product::find($id);
+
+    }
+
 }
